@@ -28,6 +28,9 @@ class Connection
             }
         }
 
+        var_dump(getenv('DATABASE'));
+        die;
+
         $banco = $envData['DATABASE'];
         $servidor = $envData['DATA_BASE_SERVER'];
         $usuario = $envData['DATA_BASE_USER'];
