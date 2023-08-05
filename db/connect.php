@@ -4,12 +4,16 @@ class Connection
 {
     public static function newConnection($mainPath = false)
     {
+
+        var_dump(getenv('DATABASE'));
+        die;
+        
         $envFilePath = '.env';
 
-        if($mainPath) {
+        if ($mainPath) {
             $envFileContent = file_get_contents($envFilePath);
         } else {
-            $envFileContent = file_get_contents('../'.$envFilePath);
+            $envFileContent = file_get_contents('../' . $envFilePath);
         }
 
         if ($envFileContent === false) {
@@ -27,9 +31,6 @@ class Connection
                 $envData[$key] = $value;
             }
         }
-
-        var_dump(getenv('DATABASE'));
-        die;
 
         $banco = $envData['DATABASE'];
         $servidor = $envData['DATA_BASE_SERVER'];
