@@ -6,11 +6,11 @@ class Connection
     {
         $envFilePath = '.env';
 
-        // if($mainPath) {
+        if($mainPath) {
             $envFileContent = file_get_contents($envFilePath);
-        // } else {
-        //     $envFileContent = file_get_contents('../'.$envFilePath);
-        // }
+        } else {
+            $envFileContent = file_get_contents('../'.$envFilePath);
+        }
 
         if ($envFileContent === false) {
             die("Não foi possível ler o arquivo .env");
@@ -33,6 +33,9 @@ class Connection
         $usuario = $envData['DATA_BASE_USER'];
         $senha = $envData['DATA_BASE_PASSWORD'];
         $port = $envData['DATA_BASE_PORT'];
+
+        var_dump($servidor, $usuario, $senha, $banco, $port);
+        die;
 
         $conn = new mysqli($servidor, $usuario, $senha, $banco, $port);
 
