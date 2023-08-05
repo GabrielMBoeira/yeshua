@@ -5,9 +5,7 @@ class Connection
     public static function newConnection($mainPath = false)
     {
 
-        var_dump(getenv('DATABASE'));
-        die;
-
+        //Localhost
         // $envFilePath = '.env';
 
         // if ($mainPath) {
@@ -37,16 +35,21 @@ class Connection
         // $usuario = $envData['DATA_BASE_USER'];
         // $senha = $envData['DATA_BASE_PASSWORD'];
         // $port = $envData['DATA_BASE_PORT'];
+        
 
-        // var_dump($servidor, $usuario, $senha, $banco, $port);
-        // die;
+        //Production
+        $banco = getenv('DATABASE');
+        $servidor = getenv('DATA_BASE_SERVER');
+        $usuario = getenv('DATA_BASE_USER');
+        $senha = getenv('DATA_BASE_PASSWORD');
+        $port = getenv('DATA_BASE_PORT');
 
-        // $conn = new mysqli($servidor, $usuario, $senha, $banco, $port);
+        $conn = new mysqli($servidor, $usuario, $senha, $banco, $port);
 
-        // if ($conn->connect_error) {
-        //     die('Erro: ' . $conn->connect_error);
-        // }
+        if ($conn->connect_error) {
+            die('Erro: ' . $conn->connect_error);
+        }
 
-        // return $conn;
+        return $conn;
     }
 }
