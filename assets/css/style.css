@@ -1602,5 +1602,11 @@ section {
     font-size: 0.7rem;
   }
 
+  @media (max-width: 991px) {
+    .table-list {
+      font-size: 1.0rem;
+    }
+  }
+
 
 }

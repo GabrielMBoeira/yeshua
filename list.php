@@ -23,7 +23,7 @@ $result = $stmt->get_result();
                         <p>Lista de espera</p>
                     </div>
                 </div>
-                <div>
+                <div class="box-list">
                     <div class="table-responsive">
 
                         <?php if ($result->num_rows > 0) {
