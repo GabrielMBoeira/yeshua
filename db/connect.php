@@ -5,7 +5,7 @@ class Connection
     public static function newConnection($mainPath = false)
     {
 
-        //Localhost
+        // // Localhost
         // $envFilePath = '.env';
 
         // if ($mainPath) {

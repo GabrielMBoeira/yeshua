@@ -14,7 +14,7 @@ if (isset($_GET['client'])) {
     $stmt->bind_param('si', $status, $id);
 
     if ($stmt->execute()) {
-        header('location: ../admin./painel.php');
+        header('location: ../admin/painel.php');
     } else {
 
         $_SESSION['msg'] =  "<div class='alert alert-danger mb-5' role='alert'> Erro ao finalizar atendimento! </div>";
