@@ -2,7 +2,7 @@
 require_once('templates/header.php');
 require_once('db/connect.php');
 
-$conn = Connection::newConnection();
+$conn = Connection::newConnection(true);
 $status = 'active';
 $sql = "SELECT * FROM clients WHERE status = ?";
 
