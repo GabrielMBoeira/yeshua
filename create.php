@@ -26,17 +26,17 @@ require_once('templates/header.php');
                <div class="row">
                   <div class="col-md-12 form-group d-flex flex-column justify-content-start align-items-start">
                      <label for="name">Nome Completo</label>
-                     <input type="text" name="name" class="form-control" id="name" placeholder="Nome Completo" required>
+                     <input type="text" name="name" class="form-control" id="name" required>
                   </div>
                </div>
                <div class="row mt-3">
                   <div class="col-md-6 form-group d-flex flex-column justify-content-start align-items-start">
                      <label for="phone">Telefone</label>
-                     <input type="text" name="phone" class="form-control" id="phone" placeholder="Telefone" required>
+                     <input type="text" name="phone" class="form-control" id="phone" required>
                   </div>
                   <div class="col-md-6 form-group date_nasc d-flex flex-column justify-content-start align-items-start">
                      <label for="birth">Data de Nascimento</label>
-                     <input type="date" class="form-control" name="birth" id="birth" placeholder="Data de nascimento" required>
+                     <input type="date" class="form-control" name="birth" id="birth" required>
                   </div>
                </div>
                <div class="my-3"></div>
