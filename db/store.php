@@ -16,7 +16,7 @@ if (isset($_POST['submitCreate'])) {
     $stmt->bind_param('ssss', $name, $phone, $birth, $status);
 
     if ($stmt->execute()) {
-        $_SESSION['msg'] = "<div class='alert alert-warning mt-5' role='alert'>Atendimento cadastrado com sucesso!</div>";
+        // $_SESSION['msg'] = "<div class='alert alert-warning mt-5' role='alert'>Atendimento cadastrado com sucesso!</div>";
         header('location: ../list.php');
     } else {
         $_SESSION['msg'] = "<div class='alert alert-danger mt-5' role='alert'>Erro ao cadastrar atendimento!</div>";
