@@ -17,7 +17,7 @@ if (isset($_POST['submitCreate'])) {
 
     if ($stmt->execute()) {
         $_SESSION['msg'] = "<div class='alert alert-warning mt-5' role='alert'>Atendimento cadastrado com sucesso!</div>";
-        header('location: ../create.php');
+        header('location: ../list.php');
     } else {
         $_SESSION['msg'] = "<div class='alert alert-danger mt-5' role='alert'>Erro ao cadastrar atendimento!</div>";
         header('location: ../create.php');

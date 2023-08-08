@@ -58,7 +58,7 @@ $result = $stmt->get_result();
                                                 <td style="vertical-align: middle;" class="text-truncate"> <?= $data['name'] ?> </td>
                                                 <td style="vertical-align: middle;" class="text-truncate"> <?= $data['phone'] ?> </td>
                                                 <td style="vertical-align: middle;">
-                                                    <a type="submit" href="../db/update.php?client=<?= $data['id'] ?>" name="submitAtendido" class="btn btn-sm" style="background-color: #cda45e; color: #fff">Atendido</a>
+                                                    <a type="submit" href="../db/update.php?client=<?= $data['id'] ?>" name="submitAtendido" class="btn btn-sm btn-atendido" style="background-color: #cda45e; color: #fff">Atendido</a>
                                                 </td>
                                             </tr>
 

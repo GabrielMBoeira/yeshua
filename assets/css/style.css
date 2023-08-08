@@ -604,7 +604,7 @@ section {
 }
 
 .section-title {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .section-title-system {
@@ -1603,9 +1603,19 @@ section {
   }
 
   @media (max-width: 991px) {
-    .table-list {
-      font-size: 1.0rem;
+
+    .section-title > p {
+      font-size: 1.6rem;
     }
+
+    .table-list {
+      font-size: 0.8rem;
+    }
+
+    .btn-atendido{
+      font-size: 0.7rem;
+    }
+
   }
 
 
