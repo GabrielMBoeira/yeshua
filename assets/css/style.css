@@ -1581,7 +1581,7 @@ section {
 
   #painel-main {
     margin-top: -50px;
-    width: 300px;
+    width: 95%;
   }
 
   .date_nasc {
@@ -1602,8 +1602,6 @@ section {
     font-size: 0.7rem;
   }
 
-  @media (max-width: 991px) {
-
     .section-title > p {
       font-size: 1.6rem;
     }
@@ -1615,8 +1613,6 @@ section {
     .btn-atendido{
       font-size: 0.7rem;
     }
-
-  }
 
 
 }
