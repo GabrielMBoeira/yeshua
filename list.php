@@ -5,11 +5,11 @@ require_once('db/connect.php');
 $conn = Connection::newConnection(true);
 $status = 'active';
 $sql = "SELECT * FROM clients WHERE status = ?";
-
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('s', $status);
 $stmt->execute();
 $result = $stmt->get_result();
+$conn->close();
 ?>
 
 <main id="main">
@@ -26,9 +26,7 @@ $result = $stmt->get_result();
                 <div class="box-list">
                     <div class="table-responsive">
 
-                        <?php if ($result->num_rows > 0) {
-
-                        ?>
+                        <?php if ($result->num_rows > 0) { ?>
 
                             <table class="table text-light table-list">
 
@@ -42,7 +40,6 @@ $result = $stmt->get_result();
                                 <tbody>
 
                                     <?php
-
 
                                     while ($data = $result->fetch_assoc()) {
 
@@ -58,23 +55,12 @@ $result = $stmt->get_result();
                                     ?>
 
                                 </tbody>
-
                             </table>
 
-
-
-
-                        <?php
-                        } else {
-                        ?>
-
+                        <?php } else { ?>
                             <p>Não há atendimento cadastrado</p>
                             <p>Você será o primeiro a ser atendido</p>
-
-                        <?php
-                        } 
-                        ?>
-
+                        <?php } ?>
 
                     </div>
                 </div>

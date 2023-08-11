@@ -1,6 +1,18 @@
 <?php
 session_start();
 require_once('templates/header.php');
+require_once('db/connect.php');
+
+$connCompany = Connection::newConnection(true);
+$sqlCompany = "SELECT * FROM company WHERE id = ?";
+$stmtCompany = $connCompany->prepare($sqlCompany);
+$id = 1;
+$stmtCompany->bind_param('i', $id);
+$stmtCompany->execute();
+$resultCompany = $stmtCompany->get_result();
+$statusCompany = $resultCompany->fetch_assoc();
+
+$connCompany->close();
 ?>
 
 <main id="main">
@@ -9,12 +21,12 @@ require_once('templates/header.php');
       <div class="container position-relative text-center" id="create">
          <div class="row d-flex justify-content-center align-items-center">
 
-         <?php
-         if (isset($_SESSION['msg'])) {
-            print_r($_SESSION['msg']);
-            unset($_SESSION['msg']);
-         }
-         ?>
+            <?php
+            if (isset($_SESSION['msg'])) {
+               print_r($_SESSION['msg']);
+               unset($_SESSION['msg']);
+            }
+            ?>
 
             <form action="db/store.php" method="post" role="form">
                <div class="col-lg-8 mt-5 mt-lg-0">
@@ -42,7 +54,13 @@ require_once('templates/header.php');
                <div class="my-3"></div>
                <div class="row">
                   <div class="text-center m-1">
-                     <button type="submit" class="submitAgenda" name="submitCreate">Cadastrar atendimento</button>
+
+                     <?php if ($statusCompany['status'] === 'open') { ?>
+                        <button type="submit" class="submitAgenda" name="submitCreate">Cadastrar atendimento</button>
+                     <?php } else { ?>
+                        <span type="submit" class="submitAgendaClose" name="submitCreate">Agenda bloqueada</span>
+                     <?php } ?>
+
                   </div>
                </div>
             </form>

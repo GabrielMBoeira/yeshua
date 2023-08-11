@@ -1376,8 +1376,18 @@ section {
 .contact .php-email-form textarea {
   padding: 10px 12px;
 }
+
 .submitAgenda {
   background: #cda45e;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.submitAgendaClose {
+  background: #f70303;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1580,7 +1590,7 @@ section {
   }
 
   #painel-main {
-    margin-top: -50px;
+    margin-top: -300px;
     width: 95%;
   }
 
@@ -1612,6 +1622,10 @@ section {
 
     .btn-atendido{
       font-size: 0.7rem;
+    }
+
+    #header .logo {
+      font-size: 1.5rem;
     }
 
 

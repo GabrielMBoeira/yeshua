@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+<?php
+require_once('../db/connect.php');
+
+$connCompany = Connection::newConnection();
+$sqlCompany = "SELECT * FROM company WHERE id = ?";
+$stmtCompany = $connCompany->prepare($sqlCompany);
+$id = 1;
+$stmtCompany->bind_param('i', $id);
+$stmtCompany->execute();
+$resultCompany = $stmtCompany->get_result();
+$statusCompany = $resultCompany->fetch_assoc();
+$connCompany->close();
+?>
+
 <html lang="pt-br">
 
 <head>
@@ -46,7 +59,7 @@
     <header id="header" class="fixed-top d-flex align-items-cente">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="index.php">Administrador</a></h1>
+            <h1 class="logo me-auto me-lg-0"><a href="#">Administrador</a></h1>
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
@@ -58,6 +71,23 @@
                     <li><a class="nav-link scrollto" href="#chefs">Projeto</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contato</a></li> -->
                     <li><a class="nav-link scrollto" href="../login.php">login</a></li>
+
+                    <?php if ($statusCompany['status'] === 'open') { ?>
+                        <li>
+                            <form action="../db/alterAgenda.php" method="post">
+                                <input type="hidden" name="status" value="close">
+                                <button class="btn btn-sm btn-success mx-3 btnAlterAgenda">Agenda está aberta</button>
+                            </form>
+                        </li>
+                    <?php } else { ?>
+                        <li>
+                            <form action="../db/alterAgenda.php" method="post">
+                                <input type="hidden" name="status" value="open">
+                                <button class="btn btn-sm btn-danger mx-3">Agenda está fechada</button>
+                            </form>
+                        </li>
+                    <?php } ?>
+
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>

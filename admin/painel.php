@@ -5,11 +5,11 @@ require_once('../db/connect.php');
 $conn = Connection::newConnection();
 $status = 'active';
 $sql = "SELECT * FROM clients WHERE status = ?";
-
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('s', $status);
 $stmt->execute();
 $result = $stmt->get_result();
+$conn->close();
 ?>
 
 <main id="main">
