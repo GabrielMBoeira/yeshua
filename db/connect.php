@@ -8,8 +8,10 @@ class Connection
         // // Localhost
         // $envFilePath = '.env';
 
-        // if ($mainPath) {
+        // if ($mainPath === 'main') {
         //     $envFileContent = file_get_contents($envFilePath);
+        // } else if ($mainPath === 'db') {
+        //     $envFileContent = file_get_contents('../../' . $envFilePath);
         // } else {
         //     $envFileContent = file_get_contents('../' . $envFilePath);
         // }

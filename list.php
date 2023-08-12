@@ -1,15 +1,11 @@
 <?php
 require_once('templates/header.php');
 require_once('db/connect.php');
+require_once('models/Client.php');
 
-$conn = Connection::newConnection(true);
-$status = 'active';
-$sql = "SELECT * FROM clients WHERE status = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param('s', $status);
-$stmt->execute();
-$result = $stmt->get_result();
-$conn->close();
+$conn = Connection::newConnection('main');
+$db = new Client();
+$result = $db->selectClientsActives($conn);
 ?>
 
 <main id="main">
@@ -39,20 +35,13 @@ $conn->close();
                                 </thead>
                                 <tbody>
 
-                                    <?php
-
-                                    while ($data = $result->fetch_assoc()) {
-
-                                    ?>
+                                <?php while ($data = $result->fetch_assoc()) { ?>
                                         <tr>
                                             <td style="vertical-align: middle;" class="text-truncate"> <?= $data['id'] ?> </td>
                                             <td style="vertical-align: middle;" class="text-truncate"> <?= $data['name'] ?> </td>
                                             <td style="vertical-align: middle;" class="text-truncate"> <?= $data['phone'] ?> </td>
                                         </tr>
-
-                                    <?php
-                                    }
-                                    ?>
+                                <?php } ?>
 
                                 </tbody>
                             </table>

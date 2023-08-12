@@ -1,15 +1,10 @@
 <?php
-require_once('templates_admin/header.php');
-require_once('../db/connect.php');
+require_once('templates_admin/header.admin.php');
+require_once('../models/Client.php');
 
 $conn = Connection::newConnection();
-$status = 'active';
-$sql = "SELECT * FROM clients WHERE status = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param('s', $status);
-$stmt->execute();
-$result = $stmt->get_result();
-$conn->close();
+$db = new Client();
+$result = $db->selectClientsActives($conn);
 ?>
 
 <main id="main">
@@ -58,7 +53,7 @@ $conn->close();
                                                 <td style="vertical-align: middle;" class="text-truncate"> <?= $data['name'] ?> </td>
                                                 <td style="vertical-align: middle;" class="text-truncate"> <?= $data['phone'] ?> </td>
                                                 <td style="vertical-align: middle;">
-                                                    <a type="submit" href="../db/update.php?client=<?= $data['id'] ?>" name="submitAtendido" class="btn btn-sm btn-atendido" style="background-color: #cda45e; color: #fff">Atendido</a>
+                                                    <a type="submit" href="../db/clients/update.php?client=<?= $data['id'] ?>" name="submitAtendido" class="btn btn-sm btn-atendido" style="background-color: #cda45e; color: #fff">Atendido</a>
                                                 </td>
                                             </tr>
 

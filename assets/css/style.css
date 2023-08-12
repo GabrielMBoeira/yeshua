@@ -1566,6 +1566,24 @@ section {
   flex-direction: column;
 }
 
+.form-btn-menu {
+  height: 100%;
+  width: 100%;
+}
+
+.btnAlterAgenda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px 0px 20px; 
+}
+
+.btnMenuAlterar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /*--------------------------------------------------------------
 # MOBILE GENERAL - Disable aos animation delay on mobile devices
@@ -1626,6 +1644,12 @@ section {
 
     #header .logo {
       font-size: 1.5rem;
+    }
+
+    .btnAlterAgenda {
+      display: flex;
+      justify-content: flex-start;
+      margin: 10px 0px 0px 0px; 
     }
 
 

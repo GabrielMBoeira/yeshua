@@ -1,18 +1,12 @@
 <?php
 session_start();
 require_once('templates/header.php');
+require_once('models/Company.php');
 require_once('db/connect.php');
 
-$connCompany = Connection::newConnection(true);
-$sqlCompany = "SELECT * FROM company WHERE id = ?";
-$stmtCompany = $connCompany->prepare($sqlCompany);
-$id = 1;
-$stmtCompany->bind_param('i', $id);
-$stmtCompany->execute();
-$resultCompany = $stmtCompany->get_result();
-$statusCompany = $resultCompany->fetch_assoc();
-
-$connCompany->close();
+$conn = Connection::newConnection('main');
+$db = new Company();
+$statusCompany = $db->getStatusCompany($conn);
 ?>
 
 <main id="main">
@@ -28,7 +22,7 @@ $connCompany->close();
             }
             ?>
 
-            <form action="db/store.php" method="post" role="form">
+            <form action="db/clients/store.php" method="post" role="form">
                <div class="col-lg-8 mt-5 mt-lg-0">
                   <div class="section-title">
                      <h2>Lista de espera</h2>
@@ -55,10 +49,10 @@ $connCompany->close();
                <div class="row">
                   <div class="text-center m-1">
 
-                     <?php if ($statusCompany['status'] === 'open') { ?>
+                     <?php if ($statusCompany === 'open') { ?>
                         <button type="submit" class="submitAgenda" name="submitCreate">Cadastrar atendimento</button>
                      <?php } else { ?>
-                        <span type="submit" class="submitAgendaClose" name="submitCreate">Agenda bloqueada</span>
+                        <span type="submit" class="submitAgendaClose" name="submitCreate">Agenda Fechada</span>
                      <?php } ?>
 
                   </div>

@@ -1,15 +1,11 @@
 <?php
 require_once('../db/connect.php');
+require_once('../models/Company.php');
 
-$connCompany = Connection::newConnection();
-$sqlCompany = "SELECT * FROM company WHERE id = ?";
-$stmtCompany = $connCompany->prepare($sqlCompany);
-$id = 1;
-$stmtCompany->bind_param('i', $id);
-$stmtCompany->execute();
-$resultCompany = $stmtCompany->get_result();
-$statusCompany = $resultCompany->fetch_assoc();
-$connCompany->close();
+$conn = Connection::newConnection();
+$db = new Company();
+$statusCompany = $db->getStatusCompany($conn);
+$conn->close();
 ?>
 
 <html lang="pt-br">
@@ -70,18 +66,18 @@ $connCompany->close();
                     <li><a class="nav-link scrollto" href="#events">Eventos</a></li>
                     <li><a class="nav-link scrollto" href="#chefs">Projeto</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contato</a></li> -->
-                    <li><a class="nav-link scrollto" href="../login.php">login</a></li>
-
-                    <?php if ($statusCompany['status'] === 'open') { ?>
-                        <li>
-                            <form action="../db/alterAgenda.php" method="post">
-                                <input type="hidden" name="status" value="close">
-                                <button class="btn btn-sm btn-success mx-3 btnAlterAgenda">Agenda está aberta</button>
-                            </form>
+                    <?php if ($statusCompany === 'open') { ?>
+                        <li class="btnAlterAgenda">
+                            <div class="btnMenuAlterar">
+                                <form action="../db/company/update.php" method="post" class="form-btn-menu">
+                                    <input type="hidden" name="status" value="close">
+                                    <button class="btn btn-sm btn-success mx-3">Agenda está aberta</button>
+                                </form>
+                            </div>
                         </li>
                     <?php } else { ?>
-                        <li>
-                            <form action="../db/alterAgenda.php" method="post">
+                        <li class="btnAlterAgenda">
+                            <form action="../db/company/update.php" method="post">
                                 <input type="hidden" name="status" value="open">
                                 <button class="btn btn-sm btn-danger mx-3">Agenda está fechada</button>
                             </form>
