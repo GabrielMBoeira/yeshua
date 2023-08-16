@@ -45,7 +45,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.php">Yeshua</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index.php">Agendacar</a></h1>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -69,14 +69,13 @@
       <div class="row">
         <div class="col-lg-8">
           <h1>
-            <!-- Bem vindo(s)  -->
-            <span>Yeshua</span>
+            <span>Agendacar</span>
           </h1>
           <h2>Barbearia</h2>
 
           <div class="btns">
-            <a href="list.php" class="btn-menu animated fadeInUp scrollto">lista de espera</a>
-            <a href="create.php" class="btn-book animated fadeInUp scrollto">Cadastrar atendimento</a>
+            <!-- <a href="list.php" class="btn-menu animated fadeInUp scrollto">lista de espera</a>
+            <a href="create.php" class="btn-book animated fadeInUp scrollto">Cadastrar atendimento</a> -->
           </div>
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
