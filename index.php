@@ -44,7 +44,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.php">Yeshuaaa</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index.php">Yeshua</a></h1>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -74,7 +74,7 @@
           <h2>Barbearia</h2>
 
           <div class="btns">
-            <a href="list.php" class="btn-menu animated fadeInUp scrollto">lista de espera</a>
+            <a href="list.php" class="btn-menu animated fadeInUp scrollto">lista de esperaxxx</a>
             <a href="create.php" class="btn-book animated fadeInUp scrollto">Cadastrar atendimento</a>
           </div>
         </div>
