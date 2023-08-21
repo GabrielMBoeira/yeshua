@@ -74,7 +74,7 @@
           <h2>Barbearia</h2>
 
           <div class="btns">
-            <a href="list.php" class="btn-menu animated fadeInUp scrollto">lista de esperaxxx</a>
+            <a href="list.php" class="btn-menu animated fadeInUp scrollto">lista de espera</a>
             <a href="create.php" class="btn-book animated fadeInUp scrollto">Cadastrar atendimento</a>
           </div>
         </div>
