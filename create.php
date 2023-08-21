@@ -52,7 +52,7 @@ $statusCompany = $db->getStatusCompany($conn);
                      <?php if ($statusCompany === 'open') { ?>
                         <button type="submit" class="submitAgenda" name="submitCreate">Cadastrar atendimento</button>
                      <?php } else { ?>
-                        <span type="submit" class="submitAgendaClose" name="submitCreate">Agenda Fechada</span>
+                        <span type="submit" class="submitAgendaClose" id="closed" name="submitCreate" onclick="closed()">Agenda Fechada</span>
                      <?php } ?>
 
                   </div>
@@ -64,3 +64,11 @@ $statusCompany = $db->getStatusCompany($conn);
    </section>
 
 </main>
+
+<script>
+
+   function closed() {
+      alert('Agenda está fechada!')
+   }
+
+</script>
