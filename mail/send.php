@@ -44,8 +44,14 @@ function sendEmail($email_to)
         // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
         $mail->isHTML(true);
         // $mail->WordWrap = 50;  
-        $mail->Subject = 'Atendimento Yeshua';
-        $mail->Body    = "testeyeshua";
+        $mail->Subject = "Atendimento Yeshua";
+
+        $mail->Body    = "Olá, Você será o 3º a ser atendido... 
+                          <br>
+                          <br>
+                          <b>Compareça na Yeshua Barbearia!</b)
+                          ";
+                          
         // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
