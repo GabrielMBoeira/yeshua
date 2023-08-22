@@ -33,8 +33,9 @@ $result = $db->selectClientsActives($conn);
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
-                                    <th scope="col">Email</th>
+                                    <th scope="col">Nome</th>
                                     <th scope="col">Telefone</th>
+                                    <th scope="col">Email</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
@@ -52,6 +53,7 @@ $result = $db->selectClientsActives($conn);
                                                 <td style="vertical-align: middle;" class="text-truncate"> <?= $data['id'] ?> </td>
                                                 <td style="vertical-align: middle;" class="text-truncate"> <?= $data['name'] ?> </td>
                                                 <td style="vertical-align: middle;" class="text-truncate"> <?= $data['phone'] ?> </td>
+                                                <td style="vertical-align: middle;" class="text-truncate"> <?= $data['email'] ?> </td>
                                                 <td style="vertical-align: middle;">
                                                     <a type="submit" href="../db/clients/update.php?client=<?= $data['id'] ?>" name="submitAtendido" class="btn btn-sm btn-atendido" style="background-color: #cda45e; color: #fff">Atendido</a>
                                                 </td>

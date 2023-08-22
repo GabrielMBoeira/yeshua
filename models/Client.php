@@ -41,4 +41,15 @@ class Client
             return false;
         }
     }
+
+    function getThirdRegistry($conn) {
+
+        $sql = "SELECT * FROM clients c where c.status = 'active' LIMIT 1 OFFSET 1";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $client = $stmt->get_result();
+
+        return $client->fetch_assoc();
+
+    }
 }
