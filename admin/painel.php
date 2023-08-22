@@ -55,7 +55,7 @@ $result = $db->selectClientsActives($conn);
                                                 <td style="vertical-align: middle;" class="text-truncate"> <?= $data['phone'] ?> </td>
                                                 <td style="vertical-align: middle;" class="text-truncate"> <?= $data['email'] ?> </td>
                                                 <td style="vertical-align: middle;">
-                                                    <a type="submit" href="../db/clients/update.php?client=<?= $data['id'] ?>" name="submitAtendido" class="btn btn-sm btn-atendido" style="background-color: #cda45e; color: #fff">Atendido</a>
+                                                    <a type="submit" href="../db/clients/update.php?client=<?= $data['id'] ?>" name="submitAtendido" id="submitAtendido" class="btn btn-sm btn-atendido" style="background-color: #cda45e; color: #fff" onclick="disableAction()">Atendido</a>
                                                 </td>
                                             </tr>
 
@@ -76,3 +76,9 @@ $result = $db->selectClientsActives($conn);
     </section>
 
 </main>
+
+<script>
+    function disableAction() {
+        document.getElementById("idDoBotao").disabled = true;
+    }
+</script>
