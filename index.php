@@ -35,8 +35,8 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
 
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-telephone d-flex align-items-center"><span class="telFone">+55 9999 99 99</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span class="preVenda">Aberto dias: 01/01/2022 - 08/01/2022</span></i>
+        <i class="bi bi-telephone d-flex align-items-center"><span class="telFone">+55 48 9617 5261</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span class="preVenda">Horários 08:00hs às 18:00hs</span></i>
       </div>
     </div>
   </div>

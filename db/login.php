@@ -12,6 +12,6 @@ if (isset($_POST['submitLogin'])) {
         header('location: ../admin/painel.php');
     } else {
         $_SESSION['msg'] =  "<div class='alert alert-danger mb-5' role='alert'>Senha e login não conferem! </div>";
-        header('location: ../admin/login.php');
+        header('location: ../login.php');
     }
 }
