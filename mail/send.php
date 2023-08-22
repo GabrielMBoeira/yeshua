@@ -49,9 +49,9 @@ function sendEmail($email_to)
         $mail->Body    = "Olá, Você será o 3º a ser atendido... 
                           <br>
                           <br>
-                          <b>Compareça na Yeshua Barbearia!</b)
+                          <b>Compareça na Yeshua Barbearia!</b>
                           ";
-                          
+
         // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
