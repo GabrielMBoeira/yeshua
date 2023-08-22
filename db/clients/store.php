@@ -8,12 +8,12 @@ $client = new Client();
 
 $name = mysqli_real_escape_string($conn, $_POST['name']);
 $phone = mysqli_real_escape_string($conn, $_POST['phone']);
-$birth = mysqli_real_escape_string($conn, $_POST['birth']);
+$email = mysqli_real_escape_string($conn, $_POST['email']);
 $status = 'active';
 
 if (isset($_POST['submitCreate'])) {
 
-    if ($client->insert($conn, $name, $phone, $birth, $status)) {
+    if ($client->insert($conn, $name, $phone, $email, $status)) {
         header('location: ../../list.php');
     } else {
         $_SESSION['msg'] = "<div class='alert alert-danger mt-5' role='alert'>Erro ao cadastrar atendimento!</div>";

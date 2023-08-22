@@ -14,12 +14,12 @@ class Client
         return $clients;
     }
 
-    function insert($conn, $name, $phone, $birth, $status)
+    function insert($conn, $name, $phone, $email, $status)
     {
-        $sql = "INSERT INTO clients (name, phone, birth, status) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO clients (name, phone, email, status) VALUES (?, ?, ?, ?)";
 
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param('ssss', $name, $phone, $birth, $status);
+        $stmt->bind_param('ssss', $name, $phone, $email, $status);
 
         if ($stmt->execute()) {
             return true;

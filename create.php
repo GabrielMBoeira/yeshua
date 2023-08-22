@@ -41,8 +41,8 @@ $statusCompany = $db->getStatusCompany($conn);
                      <input type="text" name="phone" class="form-control" id="phone" required>
                   </div>
                   <div class="col-md-6 form-group date_nasc d-flex flex-column justify-content-start align-items-start">
-                     <label for="birth">Data de Nascimento</label>
-                     <input type="date" class="form-control" name="birth" id="birth" required>
+                     <label for="email">Email</label>
+                     <input type="email" class="form-control" name="email" id="email" required>
                   </div>
                </div>
                <div class="my-3"></div>
