@@ -46,7 +46,7 @@ function sendEmail($email_to)
         // $mail->WordWrap = 50;  
         $mail->Subject = "Atendimento Yeshua";
 
-        $mail->Body    = "Olá, Você será o 3º a ser atendido(a)... 
+        $mail->Body    = "Olá, Você está prestes a ser atendido(a)... 
                           <br>
                           <br>
                           <b>Compareça na Yeshua Barbearia!</b>
