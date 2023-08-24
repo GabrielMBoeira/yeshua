@@ -1843,6 +1843,33 @@ section {
 /*--------------------------------------------------------------
 # MOBILE GENERAL - Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
+
+@media screen and (max-width: 992px) {
+
+  .telFone {
+    font-size: 0.6rem;
+    width: 100px;
+  }
+
+  .preVenda {
+    font-size: 0.6rem;
+    width: 100%;
+  }
+
+  .btn-book {
+    margin-left: 0px !important;
+  }
+
+  .btn-menu {
+    margin-bottom: 10px;
+  }
+
+  .message-home {
+    padding: 40px 20px;
+    font-size: 1.0rem !important; 
+  }
+}
+
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
@@ -1907,6 +1934,11 @@ section {
     margin: 10px 0px 0px 0px;
   }
 
+  .message-home {
+    padding: 40px 20px;
+    font-size: 1.0rem !important; 
+  }
+
 }
 
 @media screen and (max-width: 340px) {
@@ -1929,4 +1961,8 @@ section {
     margin-bottom: 10px;
   }
 
+  .message-home {
+    padding: 40px 10px;
+    font-size: 0.8rem !important; 
+  }
 }
