@@ -59,9 +59,9 @@ $conn->close();
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto" href="../index.php">Home</a></li>
-                    <li><a class="nav-link scrollto" href="../list.php">Lista de espera</a></li>
-                    <li><a class="nav-link scrollto" href="../create.php">Cadastrar atendimento</a></li>
+                    <li><a class="nav-link scrollto" href="../home">Home</a></li>
+                    <li><a class="nav-link scrollto" href="../list">Lista de espera</a></li>
+                    <li><a class="nav-link scrollto" href="../create">Cadastrar atendimento</a></li>
                     <!--<li><a class="nav-link scrollto" href="#specials">Notícias</a></li>
                     <li><a class="nav-link scrollto" href="#events">Eventos</a></li>
                     <li><a class="nav-link scrollto" href="#chefs">Projeto</a></li>

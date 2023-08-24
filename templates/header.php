@@ -46,18 +46,14 @@
     <header id="header" class="fixed-top d-flex align-items-cente">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="index.php">Yeshua</a></h1>
+            <h1 class="logo me-auto me-lg-0"><a href="home">Yeshua</a></h1>
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto" href="index.php">Home</a></li>
-                    <li><a class="nav-link scrollto" href="list.php">Lista de espera</a></li>
-                    <li><a class="nav-link scrollto" href="create.php">Cadastrar atendimento</a></li>
-                    <!--<li><a class="nav-link scrollto" href="#specials">Notícias</a></li>
-                    <li><a class="nav-link scrollto" href="#events">Eventos</a></li>
-                    <li><a class="nav-link scrollto" href="#chefs">Projeto</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contato</a></li> -->
-                    <li><a class="nav-link scrollto" href="login.php">login</a></li>
+                    <li><a class="nav-link scrollto" href="home">Home</a></li>
+                    <li><a class="nav-link scrollto" href="list">Lista de espera</a></li>
+                    <li><a class="nav-link scrollto" href="create">Cadastrar atendimento</a></li>
+                    <li><a class="nav-link scrollto" href="login">login</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
