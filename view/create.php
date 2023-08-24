@@ -32,17 +32,17 @@ $statusCompany = $db->getStatusCompany($conn);
                <div class="row">
                   <div class="col-md-12 form-group d-flex flex-column justify-content-start align-items-start">
                      <label for="name">Nome Completo</label>
-                     <input type="text" name="name" class="form-control" id="name" required>
+                     <input type="text" name="name" class="form-control" maxlength="100" id="name" required>
                   </div>
                </div>
                <div class="row mt-3">
                   <div class="col-md-6 form-group d-flex flex-column justify-content-start align-items-start">
                      <label for="phone">Telefone</label>
-                     <input type="text" name="phone" class="form-control" id="phone" required>
+                     <input type="text" name="phone" class="form-control" maxlength="20" id="phone" required>
                   </div>
                   <div class="col-md-6 form-group date_nasc d-flex flex-column justify-content-start align-items-start">
                      <label for="email">Email</label>
-                     <input type="email" class="form-control" name="email" id="email" required>
+                     <input type="email" class="form-control" name="email" maxlength="60" placeholder="Enviaremos email para chamar você.." id="email">
                   </div>
                </div>
                <div class="my-3"></div>

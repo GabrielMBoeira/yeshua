@@ -1,6 +1,6 @@
 <?php
-require_once('../db/connect.php');
-require_once('../models/Company.php');
+require_once('db/connect.php');
+require_once('models/Company.php');
 
 $conn = Connection::newConnection();
 $db = new Company();

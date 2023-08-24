@@ -9,9 +9,13 @@ $password = mysqli_real_escape_string($conn, $_POST['password']);
 if (isset($_POST['submitLogin'])) {
 
     if ($login == 'yeshua' && $password == 'yeshuajaison') {
-        header('location: ../admin/painel.php');
+
+        $_SESSION['admin'] = 'logado';
+        header('location: ../admin/painel');
+
     } else {
         $_SESSION['msg'] =  "<div class='alert alert-danger mb-5' role='alert'>Senha e login não conferem! </div>";
-        header('location: ../login.php');
+        header('location: ../login');
+
     }
 }
