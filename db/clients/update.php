@@ -2,34 +2,37 @@
 session_start();
 
 //Check Admin
-if(!isset($_SESSION['admin']) && $_SESSION['admin'] != 'logado') {
-   header('location: ../login');
-}
+if (!isset($_SESSION['admin']) && $_SESSION['admin'] != 'logado') {
 
-require_once('../connect.php');
-require_once('../../models/Client.php');
-require_once('../../mail/send.php');
+   header('location: ../../login');
+   die;
+} else {
 
-$conn = Connection::newConnection('db');
-$client = new Client();
-$id = mysqli_real_escape_string($conn, $_GET['client']);
+   require_once('../connect.php');
+   require_once('../../models/Client.php');
+   require_once('../../mail/send.php');
 
-if (isset($_GET['client'])) {
+   $conn = Connection::newConnection('db');
+   $client = new Client();
+   $id = mysqli_real_escape_string($conn, $_GET['client']);
 
-   if ($client->update($conn, $id)) {
+   if (isset($_GET['client'])) {
 
-      //Enviando email para 3º registro
-      $thirdRegistry = $client->getThirdRegistry($conn);
+      if ($client->update($conn, $id)) {
 
-      if ($thirdRegistry) {
-         if ($thirdRegistry['email']) {
-            sendEmail($thirdRegistry['email']);
+         //Enviando email para 3º registro
+         $thirdRegistry = $client->getThirdRegistry($conn);
+
+         if ($thirdRegistry) {
+            if ($thirdRegistry['email']) {
+               sendEmail($thirdRegistry['email']);
+            }
          }
-      }
 
-      header('location: ../../admin/painel');
-   } else {
-      $_SESSION['msg'] =  "<div class='alert alert-danger mb-5' role='alert'> Erro ao finalizar atendimento! </div>";
-      header('location: ../../admin/painel');
+         header('location: ../../admin/painel');
+      } else {
+         $_SESSION['msg'] =  "<div class='alert alert-danger mb-5' role='alert'> Erro ao finalizar atendimento! </div>";
+         header('location: ../../admin/painel');
+      }
    }
 }

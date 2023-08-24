@@ -1,11 +1,5 @@
 <?php
 session_start();
-
-//Check Admin
-if(!isset($_SESSION['admin']) && $_SESSION['admin'] != 'logado') {
-    header('location: ../login');
- }
-
 require_once('../connect.php');
 require_once('../../models/Client.php');
 
