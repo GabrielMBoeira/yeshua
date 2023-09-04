@@ -68,7 +68,8 @@
 
           <div class="btns">
             <a href="list" class="btn-menu animated fadeInUp scrollto">lista de espera</a>
-            <a href="create" class="btn-book animated fadeInUp scrollto">Cadastrar atendimento</a>
+            <a href="create" class="btn-menu animated fadeInUp scrollto">Cadastrar atendimento</a>
+            <a href="#menu" class="btn-book animated fadeInUp scrollto">Tabela de preços</a>
           </div>
         </div>
 
@@ -86,6 +87,83 @@
       </div>
     </div>
   </section>
+
+  <section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Ofertas</h2>
+          <p>Pacotes e serviços</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <!-- <img src="assets/img/services.png" class="menu-img" alt=""> -->
+            <div class="menu-content">
+              <a href="#">Corte Moderno</a><span>R$30,00</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Data: 01/01/2022 à 08/01/2022
+            </div> -->
+          </div>
+          <div class="col-lg-6 menu-item filter-starters">
+            <!-- <img src="assets/img/services.png" class="menu-img" alt=""> -->
+            <div class="menu-content">
+              <a href="#">Corte Tradicional</a><span>R$25,00</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Data: 01/01/2022 à 08/01/2022
+            </div> -->
+          </div>
+          <div class="col-lg-6 menu-item filter-starters">
+            <!-- <img src="assets/img/services.png" class="menu-img" alt=""> -->
+            <div class="menu-content">
+              <a href="#">Só Máquina</a><span>R$15,00</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Data: 01/01/2022 à 08/01/2022
+            </div> -->
+          </div>
+          <div class="col-lg-6 menu-item filter-starters">
+            <!-- <img src="assets/img/services.png" class="menu-img" alt=""> -->
+            <div class="menu-content">
+              <a href="#">Barba</a><span>R$20,00</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Data: 01/01/2022 à 08/01/2022
+            </div> -->
+          </div>
+          <div class="col-lg-6 menu-item filter-starters">
+            <!-- <img src="assets/img/services.png" class="menu-img" alt=""> -->
+            <div class="menu-content">
+              <a href="#">Sombrancelha</a><span>R$5,00</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Data: 01/01/2022 à 08/01/2022
+            </div> -->
+          </div>
+          <div class="col-lg-6 menu-item filter-starters">
+            <!-- <img src="assets/img/services.png" class="menu-img" alt=""> -->
+            <div class="menu-content">
+              <a href="#">Acabamento</a><span>R$5,00</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Data: 01/01/2022 à 08/01/2022
+            </div> -->
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
   <main id="main">
 
