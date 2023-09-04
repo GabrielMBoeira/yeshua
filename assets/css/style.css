@@ -1844,6 +1844,16 @@ section {
 # MOBILE GENERAL - Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 
+section {
+  padding: 60px 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container-price {
+  margin-top: 70px;
+}
+
 @media screen and (max-width: 992px) {
 
   .telFone {
