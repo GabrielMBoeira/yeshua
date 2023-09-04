@@ -88,8 +88,8 @@
     </div>
   </section>
 
-  <section id="menu" class="menu section-bg">
-      <div class="container" data-aos="fade-up">
+  <section id="menu" class="menu section-price section-bg">
+      <div class="container container-price" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Ofertas</h2>
