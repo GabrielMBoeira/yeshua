@@ -69,7 +69,7 @@
           <div class="btns">
             <a href="list" class="btn-menu animated fadeInUp scrollto">lista de espera</a>
             <a href="create" class="btn-menu animated fadeInUp scrollto">Cadastrar atendimento</a>
-            <a href="#menu" class="btn-book animated fadeInUp scrollto">Tabela de preços</a>
+            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Tabela de preços</a>
           </div>
         </div>
 
