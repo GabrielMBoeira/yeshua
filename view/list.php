@@ -28,20 +28,26 @@ $result = $db->selectClientsActives($conn);
 
                                 <thead>
                                     <tr>
-                                        <th scope="col"> ID </th>
+                                        <th scope="col"> Ordem </th>
                                         <th scope="col"> Nome </th>
-                                        <th scope="col"> Telefone </th>
+                                        <th scope="col"> Serviço </th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
-                                <?php while ($data = $result->fetch_assoc()) { ?>
-                                        <tr>
-                                            <td style="vertical-align: middle;" class="text-truncate"> <?= $data['id'] ?> </td>
-                                            <td style="vertical-align: middle;" class="text-truncate"> <?= $data['name'] ?> </td>
-                                            <td style="vertical-align: middle;" class="text-truncate"> <?= $data['phone'] ?> </td>
-                                        </tr>
-                                <?php } ?>
+                                <?php 
+                                $i = 1;
+                                while ($data = $result->fetch_assoc()) { ?>
+                                    <tr>
+                                        <td style="vertical-align: middle;" class="text-truncate"> <?= $i ?> </td>
+                                        <td style="vertical-align: middle;" class="text-truncate"> <?= $data['name'] ?> </td>
+                                        <td style="vertical-align: middle;" class="text-truncate"> <?= $data['service'] ?> </td>
+                                    </tr>
+                                        
+                                <?php 
+                                $i++;
+                                } 
+                                ?>
 
                                 </tbody>
                             </table>
