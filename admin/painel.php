@@ -42,9 +42,10 @@ $result = $db->selectClientsActives($conn);
 
                      <thead>
                         <tr>
-                           <th scope="col">ID</th>
+                           <th scope="col">Ordem</th>
                            <th scope="col">Nome</th>
                            <th scope="col">Telefone</th>
+                           <th scope="col">Serviço</th>
                            <th scope="col">Email</th>
                            <th scope="col"></th>
                         </tr>
@@ -54,19 +55,23 @@ $result = $db->selectClientsActives($conn);
 
                            <?php
                            if ($result->num_rows > 0) {
+
+                              $i = 1;
                               while ($data = $result->fetch_assoc()) {
                            ?>
                                  <input type="hidden" name="client" value="<?= $data['id'] ?>">
                                  <tr>
-                                    <td style="vertical-align: middle;" class="text-truncate"> <?= $data['id'] ?> </td>
+                                    <td style="vertical-align: middle;" class="text-truncate"> <?= $i ?> </td>
                                     <td style="vertical-align: middle;" class="text-truncate"> <?= $data['name'] ?> </td>
                                     <td style="vertical-align: middle;" class="text-truncate"> <?= $data['phone'] ?> </td>
+                                    <td style="vertical-align: middle;" class="text-truncate"> <?= $data['service'] ?> </td>
                                     <td style="vertical-align: middle;" class="text-truncate"> <?= $data['email'] ?> </td>
                                     <td style="vertical-align: middle;">
                                        <a type="submit" href="../db/clients/update.php?client=<?= $data['id'] ?>" name="submitAtendido" id="preload-link" class="btn btn-sm btn-atendido preload-link" style="background-color: #cda45e; color: #fff" onclick="clickLoader()">Atendido</a>
                                     </td>
                                  </tr>
                            <?php
+                              $i++;
                               }
                            }
                            ?>

@@ -45,6 +45,23 @@ $statusCompany = $db->getStatusCompany($conn);
                      <input type="email" class="form-control" name="email" maxlength="60" placeholder="Enviaremos email para chamar você.." id="email">
                   </div>
                </div>
+               <div class="row mt-3">
+                  <div class="col-md-12 form-group d-flex flex-column justify-content-start align-items-start">
+                     <label for="service">Tipo de serviço</label>
+                     <select name="service" class="form-control" id="service" required>
+                        <option value=""></option>
+                        <option value="Corte Moderno">Corte Moderno</option>
+                        <option value="Corte Tradicional">Corte Tradicional</option>
+                        <option value="Só Maquina">Só Maquina</option>
+                        <option value="Barba">Barba</option>
+                        <option value="Sombrancelha">Sombrancelha</option>
+                        <option value="Acabamento">Acabamento</option>
+                        <option value="Corte Moderno + Barba">Corte Moderno + Barba</option>
+                        <option value="Corte Tradicional + Barba">Corte Tradicional + Barba</option>
+                        <option value="Só Máquina + Barba">Só Máquina + Barba</option>
+                     </select>
+                  </div>
+               </div>
                <div class="my-3"></div>
                <div class="row">
                   <div class="text-center m-1">
